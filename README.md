@@ -1,4 +1,4 @@
-# flutter_application_1
+# Flutter Useful Commands
 
-A new Flutter project.
-# flutter_application_1
+- flutter create flutterapp1
+- flutter run
