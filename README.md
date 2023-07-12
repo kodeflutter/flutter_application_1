@@ -11,6 +11,8 @@
 
   - for various widget options
 
+- Ctrl + Shift + Right Arrow // Select Entire Widget
+
 - Settings -> Search 'Dart ui guide'
 
   - Enable Dart preview ui guide
