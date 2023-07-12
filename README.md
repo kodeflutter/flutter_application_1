@@ -1,18 +1,30 @@
 # VSCODE SHORTCUTS
 
 - CMD + B
-  - Toggle Sidebar
+  -- Toggle Sidebar
 - ctrl + SPACE
-  - Show Attributes of Widget
+  -- Show Attributes of Widget
 - CMD + SHIFT + SPACE
+  -- Show all attribute of widget in Modal
 
-  - Show all attribute of widget in Modal
+- Ctrl + Shift + R
+
+  - for various widget options
+
+- Settings -> Search 'Dart ui guide'
+
+  - Enable Dart preview ui guide
 
 - Add Dependency
+
   - CMD + SHIFT + P
   - SEARCH dart
   - Add Dependency
   - Type package name
+
+## Youtube Ref
+
+- https://www.youtube.com/watch?v=FdgDgcrDeNI&t=24s&ab_channel=Fireship
 
 ## Useful VSCODE Extensions
 
