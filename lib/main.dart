@@ -23,6 +23,8 @@ class SampleContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const count = 100;
+
     return Container(
       height: 150,
       alignment: Alignment.center,
@@ -33,7 +35,7 @@ class SampleContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(
-        message,
+        '$message :: $count',
         textDirection: TextDirection.ltr,
         style: TextStyle(
           color: Colors.white,
