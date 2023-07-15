@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    Directionality(
-      textDirection: TextDirection.ltr,
-      child: SingleChildScrollView(
-        child: Column(
-          children:
-              List.generate(10, (index) => SampleContainer(message: "Hello")),
-        ),
+  runApp(MaterialApp(
+    home: Scaffold(
+      body: SampleContainer(
+        message: "Hello",
       ),
     ),
-  );
+  ));
 }
 
 class SampleContainer extends StatelessWidget {
