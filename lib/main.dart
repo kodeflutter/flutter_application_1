@@ -6,7 +6,8 @@ void main() {
       textDirection: TextDirection.ltr,
       child: SingleChildScrollView(
         child: Column(
-          children: List.generate(10, (index) => SampleContainer()),
+          children:
+              List.generate(10, (index) => SampleContainer(message: "Hello")),
         ),
       ),
     ),
@@ -14,7 +15,8 @@ void main() {
 }
 
 class SampleContainer extends StatelessWidget {
-  const SampleContainer({super.key});
+  const SampleContainer({super.key, required this.message});
+  final String message;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +29,8 @@ class SampleContainer extends StatelessWidget {
         color: Colors.green,
         borderRadius: BorderRadius.circular(8),
       ),
-      child: const Text(
-        "Helllo Worlddd",
+      child: Text(
+        message,
         textDirection: TextDirection.ltr,
         style: TextStyle(
           color: Colors.white,
