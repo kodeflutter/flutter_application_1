@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      body: SampleContainer(
-        message: "Hello",
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: List.generate(
+              10,
+              (index) => SampleContainer(message: "Helloo"),
+            ),
+          ),
+        ),
       ),
     ),
-  ));
+  );
 }
 
 class SampleContainer extends StatelessWidget {
