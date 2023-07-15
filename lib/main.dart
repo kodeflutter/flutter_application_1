@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     Column(
-      children: [
-        SampleContainer(),
-        SampleContainer(),
-      ],
+      children: List.generate(10, (index) => SampleContainer()),
     ),
   );
 }
@@ -25,7 +22,7 @@ class SampleContainer extends StatelessWidget {
         color: Colors.green,
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Text(
+      child: const Text(
         "Helllo Worlddd",
         textDirection: TextDirection.ltr,
         style: TextStyle(
