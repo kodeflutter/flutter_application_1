@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    Column(
-      children: List.generate(10, (index) => SampleContainer()),
+    Directionality(
+      textDirection: TextDirection.ltr,
+      child: SingleChildScrollView(
+        child: Column(
+          children: List.generate(10, (index) => SampleContainer()),
+        ),
+      ),
     ),
   );
 }
@@ -16,8 +21,8 @@ class SampleContainer extends StatelessWidget {
     return Container(
       height: 150,
       alignment: Alignment.center,
-      padding: EdgeInsets.all(8),
-      margin: EdgeInsets.only(bottom: 2),
+      padding: const EdgeInsets.all(8),
+      margin: const EdgeInsets.only(bottom: 2),
       decoration: BoxDecoration(
         color: Colors.green,
         borderRadius: BorderRadius.circular(8),
