@@ -4,14 +4,21 @@ import 'futureapi/hellofuture.api.dart' show helloFutureDemo;
 void main() {
   final list = ["delhi", "calcutta", "chennai"];
 
-  final futureList = helloFutureDemo();
-
   runApp(
     MaterialApp(
       home: Scaffold(
         body: FutureBuilder(
+          future: helloFutureDemo(),
           builder: (context, snapshot) {
-            return SampleContainer(message: "Hello World");
+            if (snapshot.data != null) {
+              return const SampleContainer(message: "Hello World");
+            } else {
+              return Container(
+                height: 200,
+                alignment: Alignment.center,
+                child: const CircularProgressIndicator(),
+              );
+            }
           },
         ),
       ),
