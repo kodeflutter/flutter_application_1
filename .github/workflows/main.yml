@@ -20,8 +20,6 @@ jobs:
           channel: "stable"
           cache: true
 
-      - uses: dart-lang/setup-dart@v1.5.0
-
       - run: flutter --version
       - run: dart --version
 
