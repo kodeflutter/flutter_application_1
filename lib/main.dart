@@ -9,9 +9,10 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: ListView.builder(
-          itemBuilder: ((context, index) => SampleContainer(message: list.elementAt(index))),
-          itemCount: list.length,
+        body: FutureBuilder(
+          builder: (context, snapshot) {
+            return SampleContainer(message: "Hello World");
+          },
         ),
       ),
     ),
