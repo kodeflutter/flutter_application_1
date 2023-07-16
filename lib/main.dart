@@ -10,11 +10,11 @@ void main() {
         body: FutureBuilder(
           future: helloFutureDemo(),
           builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: const CircularProgressIndicator(),
+            if (snapshot.hasData) {
+              final list1 = snapshot.data ?? [];
+              return ListView.builder(
+                itemCount: list1.length,
+                itemBuilder: (context, index) => SampleContainer(message: list1.elementAt(index)),
               );
             } else if (snapshot.hasError) {
               return Container(
@@ -23,10 +23,10 @@ void main() {
                 child: const Text("An Error Occured"),
               );
             } else {
-              final list1 = snapshot.data ?? [];
-              return ListView.builder(
-                itemCount: list1.length,
-                itemBuilder: (context, index) => SampleContainer(message: list1.elementAt(index)),
+              return Container(
+                height: 200,
+                alignment: Alignment.center,
+                child: const CircularProgressIndicator(),
               );
             }
           },
