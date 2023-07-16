@@ -5,7 +5,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         body: ListView.builder(
-          itemBuilder: ((context, index) => SampleContainer(message: "Hi")),
+          itemBuilder: ((context, index) => const SampleContainer(message: "Hi")),
           itemCount: 10,
         ),
       ),
