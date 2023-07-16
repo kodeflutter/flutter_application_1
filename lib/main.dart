@@ -4,10 +4,10 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: ListView.builder(
-          itemBuilder: ((context, index) => const SampleContainer(message: "Hi")),
-          itemCount: 10,
-        ),
+        body: ListView.separated(
+            itemBuilder: ((context, index) => const SampleContainer(message: "Hi")),
+            separatorBuilder: (context, index) => Divider(thickness: 5),
+            itemCount: 10),
       ),
     ),
   );
@@ -25,7 +25,7 @@ class SampleContainer extends StatelessWidget {
       height: 150,
       alignment: Alignment.center,
       padding: const EdgeInsets.all(8),
-      margin: const EdgeInsets.only(bottom: 2),
+      margin: const EdgeInsets.only(bottom: 0),
       decoration: BoxDecoration(
         color: Colors.green,
         borderRadius: BorderRadius.circular(8),
