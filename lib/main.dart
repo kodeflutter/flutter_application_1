@@ -4,14 +4,10 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: List.generate(
-              10,
-              (index) => SampleContainer(message: "Helloo"),
-            ),
-          ),
-        ),
+        body: ListView(children: [
+          const SampleContainer(message: "hi"),
+          const SampleContainer(message: "hello")
+        ]),
       ),
     ),
   );
