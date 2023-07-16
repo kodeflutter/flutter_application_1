@@ -4,10 +4,12 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: ListView(children: [
-          const SampleContainer(message: "hi"),
-          const SampleContainer(message: "hello")
-        ]),
+        body: ListView(
+          children: const [
+            SampleContainer(message: "hi"),
+            SampleContainer(message: "hello")
+          ],
+        ),
       ),
     ),
   );
