@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  final list = ["delhi", "calcutta", "chennai"];
+
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: ListView.separated(
-            itemBuilder: ((context, index) => const SampleContainer(message: "Hi")),
-            separatorBuilder: (context, index) => Divider(thickness: 5),
-            itemCount: 10),
+        body: ListView.builder(
+          itemBuilder: ((context, index) => SampleContainer(message: list.elementAt(index))),
+          itemCount: list.length,
+        ),
       ),
     ),
   );
@@ -25,7 +27,7 @@ class SampleContainer extends StatelessWidget {
       height: 150,
       alignment: Alignment.center,
       padding: const EdgeInsets.all(8),
-      margin: const EdgeInsets.only(bottom: 0),
+      margin: const EdgeInsets.only(bottom: 1),
       decoration: BoxDecoration(
         color: Colors.green,
         borderRadius: BorderRadius.circular(8),
