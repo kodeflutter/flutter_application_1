@@ -24,7 +24,6 @@ jobs:
       - run: flutter --version
       - run: dart --version
       
-      - run: flutter pub cache clean
       - name: Install dependencies
         run: flutter pub get
 
