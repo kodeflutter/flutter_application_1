@@ -5,10 +5,10 @@ void main() {
     MaterialApp(
       home: Scaffold(
         body: ListView(
-          children: const [
-            SampleContainer(message: "hi"),
-            SampleContainer(message: "hello")
-          ],
+          children: List.of(const [
+            SampleContainer(message: "A"),
+            SampleContainer(message: "B")
+          ], growable: true),
         ),
       ),
     ),
