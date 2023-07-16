@@ -4,8 +4,9 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: ListView(
-          children: List.filled(10, const SampleContainer(message: "Helllo")),
+        body: ListView.builder(
+          itemBuilder: ((context, index) => SampleContainer(message: "Hi")),
+          itemCount: 10,
         ),
       ),
     ),
@@ -32,7 +33,7 @@ class SampleContainer extends StatelessWidget {
       child: Text(
         '$message :: $count',
         textDirection: TextDirection.ltr,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white,
           fontSize: 32,
           fontWeight: FontWeight.bold,
