@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'futureapi/hellofuture.api.dart' show helloFutureDemo;
 
 void main() {
-  final list = ["delhi", "calcutta", "chennai"];
-
   runApp(
     MaterialApp(
       home: Scaffold(
@@ -11,10 +9,10 @@ void main() {
           future: helloFutureDemo(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              final list1 = snapshot.data ?? [];
+              final list = snapshot.data ?? [];
               return ListView.builder(
-                itemCount: list1.length,
-                itemBuilder: (context, index) => SampleContainer(message: list1.elementAt(index)),
+                itemCount: list.length,
+                itemBuilder: (context, index) => SampleContainer(message: list.elementAt(index)),
               );
             } else if (snapshot.hasError) {
               return Container(
